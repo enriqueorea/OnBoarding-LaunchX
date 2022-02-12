@@ -1,0 +1,17 @@
+text = """Interesting facts about the Moon. The Moon is Earth's only satellite. There are several interesting facts about the Moon and how it affects life here on Earth.On average, the Moon moves 4cm away from the Earth every year. This yearly drift is not significant enough to cause immediate effects on Earth. The highest daylight temperature of the Moon is 127 C."""
+
+matchText = [
+    'average',
+    'temperature',
+    'distance'
+]
+
+newText = text.split('.')
+for sentence in newText:
+    for match in matchText:
+        if match in sentence:
+            if "C" in sentence:
+                print(sentence.replace('C', 'Celsius'))
+            else:
+                print(sentence)
+            
